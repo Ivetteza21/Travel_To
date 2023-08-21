@@ -1,0 +1,15 @@
+.Confirmacion{
+    width: 200px;
+    display: grid;
+  place-items: center;
+}
+
+span{
+    justify-self: center;
+    color:green;
+    font-size: 50px;
+}
+
+button{
+    background-color:#ff7700bb ;
+}

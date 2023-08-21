@@ -1,0 +1,1206 @@
+<head>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  </head>
+  
+  <!-- Destinos select-->
+  <mat-card>
+    <mat-card-content>
+      <h3>Seleccione un destino:</h3>
+    </mat-card-content>
+    <mat-form-field>
+      <mat-select [(value)]="selectedDestiny">
+        <!-- <mat-option></mat-option> -->
+        <mat-option [value]="option.value" *ngFor="let option of destinos">{{ option.viewValue }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-card>
+  
+  <!-- Opcion General-->
+  <div *ngIf="selectedDestiny==this.destinos[0].value">
+    <div class="contenedorP">
+      <!-- Galeria 1 -->
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>La Casona de la Ronda</mat-card-title>
+          <mat-card-subtitle>Quito</mat-card-subtitle>
+        </mat-card-header>
+        <div class="contendcarrusel">
+          <div class="imagenes">
+            <input type="radio" name="slide" id="img1">
+            <input type="radio" name="slide" id="img2">
+            <input type="radio" name="slide" id="img3">
+  
+            <img mat-card-image
+              src="https://webbox.imgix.net/images/vqbqxfofabspmjxw/3146b821-b272-47a9-b66f-76275eb2ce20.jpg?auto=format,compress&fit=crop&crop=entropy&w=750&h=600"
+              alt="hotel" class="img" class="m1">
+            <img mat-card-image
+              src="https://webbox.imgix.net/images/vqbqxfofabspmjxw/6526b77b-30e7-403a-bff1-bda4a86bd0c8.jpg?auto=format,compress&fit=crop&crop=entropy&w=750&h=600"
+              alt="hotel" class="img" class="m2">
+            <img mat-card-image
+              src="https://webbox.imgix.net/images/vqbqxfofabspmjxw/c4de11e9-4ea4-4af1-9c60-e56c9bf17763.jpg?auto=format,compress&fit=crop&crop=entropy&w=600&h=450"
+              alt="hotel" class="img" class="m3">
+  
+          </div>
+          <div class="puntos">
+            <label for="img1"></label>
+            <label for="img2"></label>
+            <label for="img3"></label>
+          </div>
+  
+        </div>
+        <mat-card-content>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <p>
+            Se ofrece un desayuno buffet americano que está incluido en el precio de la habitación.
+          </p>
+          <h4> $ 133 Noche</h4>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="abrirInformacion()">Reservar</button>
+        </mat-card-actions>
+      </mat-card>
+      <!-- Galeria 2 -->
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Hostal Sueños Silvestres</mat-card-title>
+          <mat-card-subtitle>Puero Ayora,Galápagos</mat-card-subtitle>
+        </mat-card-header>
+        <div id="contendcarrusel">
+          <div class="imagenes">
+            <input type="radio" name="slide" id="img4">
+            <input type="radio" name="slide" id="img5">
+            <input type="radio" name="slide" id="img6">
+  
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/180072706.jpg?k=5c277aaf4f7b1d9f0dd757b9fb12c8345334139f432398e09b591bf337decc82&o=&hp=1"
+              alt="hotel" class="img" class="m4">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/180085287.jpg?k=13928260830ef944fd06d3c798d3aea9ba3c6081852f7c6f1333040076f04436&o=&hp=1"
+              alt="hotel" class="img" class="m5">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/180076116.jpg?k=33c9a33d520e82b6e35ed12dd2b3a658bd8c92eec417810a0290b7c793b8c5c8&o=&hp=1"
+              alt="hotel" class="img" class="m6">
+  
+          </div>
+          <div class="puntos">
+            <label for="img4"></label>
+            <label for="img5"></label>
+            <label for="img6"></label>
+          </div>
+        </div>
+        <mat-card-content>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <p>
+            Cuenta con terraza y vistas al jardín,WiFi en todas las instalaciones.
+            Dispone de cocina compartida
+          </p>
+          <h4> $ 54 Noche</h4>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="abrirInformacionHotelSueno()">Reservar</button>
+        </mat-card-actions>
+      </mat-card>
+      <!-- Galeria 3 -->
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Hotel Vieja Cuba</mat-card-title>
+          <mat-card-subtitle>Quito</mat-card-subtitle>
+        </mat-card-header>
+        <div id="contendcarrusel">
+          <div class="imagenes">
+            <input type="radio" name="slide" id="img7">
+            <input type="radio" name="slide" id="img8">
+            <input type="radio" name="slide" id="img9">
+  
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/165834889.jpg?k=f96ab2bc00d722e4317f745713b3d5c24bbf16a4fb1392dbb184343b4fdc7f38&o=&hp=1"
+              alt="hotel" class="img" class="m7">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/57364191.jpg?k=347c0c87602c88f0914b1113fa566baf5340985a059a2d07405e647a142395d7&o=&hp=1"
+              alt="hotel" class="img" class="m8">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/167424408.jpg?k=2e8585e2b48d5efb0a76f2cffff6801140f193a7bd82f864b554c65de0785a20&o=&hp=1"
+              alt="hotel" class="img" class="m9">
+  
+          </div>
+          <div class="puntos">
+            <label for="img7"></label>
+            <label for="img8"></label>
+            <label for="img9"></label>
+          </div>
+        </div>
+        <mat-card-content>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <p>
+            Dispone de instalaciones de masaje, conexión gratuita a
+            internet y aparcamiento privado gratuito.
+          </p>
+          <h4> $ 87 Noche</h4>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)=" abrirInformacionHotelCuba()">Reservar</button>
+        </mat-card-actions>
+      </mat-card>
+      <!-- Galeria 4 -->
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Hamadryade Lodge</mat-card-title>
+          <mat-card-subtitle>Puerto Misahuallí, Napo </mat-card-subtitle>
+        </mat-card-header>
+        <div id="contendcarrusel">
+          <div class="imagenes">
+            <input type="radio" name="slide" id="img10">
+            <input type="radio" name="slide" id="img11">
+            <input type="radio" name="slide" id="img12">
+  
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/457748721.jpg?k=2d46f4a58f1a54ef2cb1d14023858dfc0fabca511f451235ae16a3619ea68564&o=&hp=1"
+              alt="hotel" class="img" class="m10">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/343332824.jpg?k=fc767218affc1eccfc73ad69670a094e59b2401d4a61d6f3bb92304c873547df&o=&hp=1"
+              alt="hotel" class="img" class="m11">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/34100236.jpg?k=3f10484426f4bafa0ed36e15da9690fa088d471167c032c1643128ac02232681&o=&hp=1"
+              alt="hotel" class="img" class="m12">
+  
+          </div>
+          <div class="puntos">
+            <label for="img10"></label>
+            <label for="img11"></label>
+            <label for="img12"></label>
+          </div>
+        </div>
+        <mat-card-content>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <p>
+            Ofrece elegantes bungalows con impresionantes vistas y una piscina al aire libre.
+          </p>
+          <h4> $ 135 Noche</h4>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="abrirInformacionHotelLodge()">Reservar</button>
+        </mat-card-actions>
+      </mat-card>
+      <!-- Galeria 5 -->
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Cactus</mat-card-title>
+          <mat-card-subtitle>Puerto Baquerizo Moreno, Galápagos</mat-card-subtitle>
+        </mat-card-header>
+        <div id="contendcarrusel">
+          <div class="imagenes">
+            <input type="radio" name="slide" id="img13">
+            <input type="radio" name="slide" id="img14">
+            <input type="radio" name="slide" id="img15">
+  
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/217396485.jpg?k=4ca06b36894c33a0f21c0a7da82f2db46e733f081ab9d42809ddf854269d8e92&o=&hp=1"
+              alt="hotel" class="img" class="m13">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/403445186.jpg?k=82f0572dfa98ec750160fa0b23fcf35d31dcc026905679ac95978aa057daf4cc&o=&hp=1"
+              alt="hotel" class="img" class="m14">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/217396496.jpg?k=6208eba71ba5f686697ebb0f0634bd2651685416d3795738ab876e012caad7df&o=&hp=1"
+              alt="hotel" class="img" class="m15">
+  
+          </div>
+          <div class="puntos">
+            <label for="img13"></label>
+            <label for="img14"></label>
+            <label for="img15"></label>
+          </div>
+        </div>
+        <mat-card-content>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <p>
+            Ofrece habitaciones con aire acondicionado, WiFi gratuita y registro de entrada y salida exprés.
+          </p>
+          <h4> $ 120 Noche</h4>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="abrirInformacionHotelCactus()">Reservar</button>
+        </mat-card-actions>
+      </mat-card>
+      <!-- Galeria 6 -->
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Misahualli Laguna Paikawe </mat-card-title>
+          <mat-card-subtitle>Puerto Misahuallí, Napo</mat-card-subtitle>
+        </mat-card-header>
+        <div id="contendcarrusel">
+          <div class="imagenes">
+            <input type="radio" name="slide" id="img16">
+            <input type="radio" name="slide" id="img17">
+            <input type="radio" name="slide" id="img18">
+  
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/321954884.jpg?k=ce92c6bd20449fdc4dce7e2e84d8d11f60fc4a5351a06c84cd3d2389c1981518&o=&hp=1"
+              alt="hotel" class="img" class="m16">
+            <img mat-card-image
+              src="https://q-xx.bstatic.com/xdata/images/hotel/max1000/85087456.jpg?k=d75404a9ee0fd75825e1448e83b0fd19ebe4a18d6b594d115f49752fb22a8bee"
+              alt="hotel" class="img" class="m17">
+            <img mat-card-image
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVrNm-zT185EQ0ITUWULZZBt_QFlnfcz6Qnw&usqp=CAU"
+              alt="hotel" class="img" class="m18">
+  
+          </div>
+          <div class="puntos">
+            <label for="img16"></label>
+            <label for="img17"></label>
+            <label for="img18"></label>
+          </div>
+  
+        </div>
+        <mat-card-content>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <p>
+            Ofrece WiFi gratuita, jardín, salón compartido y terraza.
+            Desayuno inglés/irlandés y americano a diario.
+          </p>
+          <h4> $ 32 Noche</h4>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="abrirInformacionHotelLaguna()">Reservar</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  
+  <!-- Opcion Quito-->
+  <div *ngIf="selectedDestiny==this.destinos[1].value">
+    <div class="contenedorP">
+      <!-- Galeria 1 -->
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>La Casona de la Ronda</mat-card-title>
+          <mat-card-subtitle>Quito</mat-card-subtitle>
+        </mat-card-header>
+        <div class="contendcarrusel">
+          <div class="imagenes">
+            <input type="radio" name="slide" id="img1">
+            <input type="radio" name="slide" id="img2">
+            <input type="radio" name="slide" id="img3">
+  
+            <img mat-card-image
+              src="https://webbox.imgix.net/images/vqbqxfofabspmjxw/3146b821-b272-47a9-b66f-76275eb2ce20.jpg?auto=format,compress&fit=crop&crop=entropy&w=750&h=600"
+              alt="hotel" class="img" class="m1">
+            <img mat-card-image
+              src="https://webbox.imgix.net/images/vqbqxfofabspmjxw/6526b77b-30e7-403a-bff1-bda4a86bd0c8.jpg?auto=format,compress&fit=crop&crop=entropy&w=750&h=600"
+              alt="hotel" class="img" class="m2">
+            <img mat-card-image
+              src="https://webbox.imgix.net/images/vqbqxfofabspmjxw/c4de11e9-4ea4-4af1-9c60-e56c9bf17763.jpg?auto=format,compress&fit=crop&crop=entropy&w=600&h=450"
+              alt="hotel" class="img" class="m3">
+  
+          </div>
+          <div class="puntos">
+            <label for="img1"></label>
+            <label for="img2"></label>
+            <label for="img3"></label>
+          </div>
+  
+        </div>
+        <mat-card-content>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <p>
+            Se ofrece un desayuno buffet americano que está incluido en el precio de la habitación.
+          </p>
+          <h4> $ 133 Noche</h4>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="abrirInformacion()">Reservar</button>
+        </mat-card-actions>
+      </mat-card>
+      <!-- Galeria 2 -->
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>La Quinta by Wyndham</mat-card-title>
+          <mat-card-subtitle>Quito</mat-card-subtitle>
+        </mat-card-header>
+        <div id="contendcarrusel">
+          <div class="imagenes">
+            <input type="radio" name="slide" id="img4">
+            <input type="radio" name="slide" id="img5">
+            <input type="radio" name="slide" id="img6">
+  
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/463120784.jpg?k=ab1d7d488f600c408d616dedb025090b2d670a3de5cc7d36a343f470c92d0192&o=&hp=1"
+              alt="hotel" class="img" class="m4">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/441685610.jpg?k=e71e9f7432a233dbc943bf58bfbfb27bc8b42f5f11b2e478932a7e38669f4838&o=&hp=1"
+              alt="hotel" class="img" class="m5">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/458199146.jpg?k=8be8adcdc462ac4dbc90de30c4cb8b6a2d97130f70e6695ae630d0ae25f66094&o=&hp=1"
+              alt="hotel" class="img" class="m6">
+  
+          </div>
+          <div class="puntos">
+            <label for="img4"></label>
+            <label for="img5"></label>
+            <label for="img6"></label>
+          </div>
+        </div>
+        <mat-card-content>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <p>
+            Ofrece alojamiento con centro de fitness, aparcamiento privado gratuito, restaurante y bar.
+          </p>
+          <h4> $ 70 Noche</h4>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="abrirInformacionHotelQuinta()">Reservar</button>
+        </mat-card-actions>
+      </mat-card>
+      <!-- Galeria 3 -->
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Hotel Vieja Cuba</mat-card-title>
+          <mat-card-subtitle>Quito</mat-card-subtitle>
+        </mat-card-header>
+        <div id="contendcarrusel">
+          <div class="imagenes">
+            <input type="radio" name="slide" id="img7">
+            <input type="radio" name="slide" id="img8">
+            <input type="radio" name="slide" id="img9">
+  
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/165834889.jpg?k=f96ab2bc00d722e4317f745713b3d5c24bbf16a4fb1392dbb184343b4fdc7f38&o=&hp=1"
+              alt="hotel" class="img" class="m7">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/57364191.jpg?k=347c0c87602c88f0914b1113fa566baf5340985a059a2d07405e647a142395d7&o=&hp=1"
+              alt="hotel" class="img" class="m8">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/167424408.jpg?k=2e8585e2b48d5efb0a76f2cffff6801140f193a7bd82f864b554c65de0785a20&o=&hp=1"
+              alt="hotel" class="img" class="m9">
+  
+          </div>
+          <div class="puntos">
+            <label for="img7"></label>
+            <label for="img8"></label>
+            <label for="img9"></label>
+          </div>
+        </div>
+        <mat-card-content>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <p>
+            Dispone de instalaciones de masaje, conexión gratuita a
+            internet y aparcamiento privado gratuito.
+          </p>
+          <h4> $ 87 Noche</h4>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)=" abrirInformacionHotelCuba()">Reservar</button>
+        </mat-card-actions>
+      </mat-card>
+      <!-- Galeria 4 -->
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Hotel David</mat-card-title>
+          <mat-card-subtitle>Quito </mat-card-subtitle>
+        </mat-card-header>
+        <div id="contendcarrusel">
+          <div class="imagenes">
+            <input type="radio" name="slide" id="img10">
+            <input type="radio" name="slide" id="img11">
+            <input type="radio" name="slide" id="img12">
+  
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/91773682.jpg?k=8332fba59d5d3c248935c786cb98a16c9a19dd6e29bcc4319c1f6e5e66420d43&o=&hp=1"
+              alt="hotel" class="img" class="m10">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/307813653.jpg?k=20ffe156478074b0c43b7061cd13d5eb27c0b37c3e4154c5ddc2d62423a9e80b&o=&hp=1"
+              alt="hotel" class="img" class="m11">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/91773722.jpg?k=7fe20dfe70439ab2f0f8023f3955eed11e39a48d95f3eca5bea3f9513f807e8d&o=&hp=1"
+              alt="hotel" class="img" class="m12">
+  
+          </div>
+          <div class="puntos">
+            <label for="img10"></label>
+            <label for="img11"></label>
+            <label for="img12"></label>
+          </div>
+        </div>
+        <mat-card-content>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <p>
+            Ofrece restaurante con vistas panorámicas a la ciudad, bar karaoke y conexión WiFi gratuita. 
+          </p>
+          <h4> $ 30 Noche</h4>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="abrirInformacionHotelDavid() " >Reservar</button>
+        </mat-card-actions>
+      </mat-card>
+      <!-- Galeria 5 -->
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Hotel Bellavista </mat-card-title>
+          <mat-card-subtitle>Quito</mat-card-subtitle>
+        </mat-card-header>
+        <div id="contendcarrusel">
+          <div class="imagenes">
+            <input type="radio" name="slide" id="img13">
+            <input type="radio" name="slide" id="img14">
+            <input type="radio" name="slide" id="img15">
+  
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/57695866.jpg?k=47a7352808fe58a3cd673c9742d72e03f7d334677dc58bbe6ed5c0408f069d56&o=&hp=1"
+              alt="hotel" class="img" class="m13">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/87087099.jpg?k=377491f9a73f948ad4cd2719194d77f81e6e45cf4ae73359ef4cd68b1d271799&o=&hp=1"
+              alt="hotel" class="img" class="m14">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/56932407.jpg?k=83fa5de14a9d43d52c64bd63758eed95abad226d84b1a0978b545afd782b8fe8&o=&hp=1"
+              alt="hotel" class="img" class="m15">
+  
+          </div>
+          <div class="puntos">
+            <label for="img13"></label>
+            <label for="img14"></label>
+            <label for="img15"></label>
+          </div>
+        </div>
+        <mat-card-content>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <p>
+            Alberga un restaurante y un jardín. Se facilita aparcamiento privado gratuito.
+          </p>
+          <h4> $ 46 Noche</h4>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="abrirInformacionHotelBella()">Reservar</button>
+        </mat-card-actions>
+      </mat-card>
+      <!-- Galeria 6 -->
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Friends Hotel & Rooftop </mat-card-title>
+          <mat-card-subtitle>Quito</mat-card-subtitle>
+        </mat-card-header>
+        <div id="contendcarrusel">
+          <div class="imagenes">
+            <input type="radio" name="slide" id="img16">
+            <input type="radio" name="slide" id="img17">
+            <input type="radio" name="slide" id="img18">
+  
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/407331525.jpg?k=c3d5fb5712dc67633b02bf5c4c727d8f50282f497295e1585eac5d9805bc79e5&o=&hp=1"
+              alt="hotel" class="img" class="m16">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/368426264.jpg?k=12d1a41110d6b1eb62fe9d2d041536b4346bb1438ee8d3a305b05e573ee4b6c6&o=&hp=1"
+              alt="hotel" class="img" class="m17">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/346994766.jpg?k=05a12bb26446412264ea497e67883f701266899758fcb9286522d7a5704d1e66&o=&hp=1"
+              alt="hotel" class="img" class="m18">
+  
+          </div>
+          <div class="puntos">
+            <label for="img16"></label>
+            <label for="img17"></label>
+            <label for="img18"></label>
+          </div>
+  
+        </div>
+        <mat-card-content>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <p>
+            ofrece alojamiento con terraza y aparcamiento privado.Todas las habitaciones incluyen armario.
+          </p>
+          <h4> $ 70 Noche</h4>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="abrirInformacionHotelFriends() ">Reservar</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  
+  <!-- Opcion Napo-->
+  <div *ngIf="selectedDestiny==this.destinos[2].value">
+    <div class="contenedorP">
+      <!-- Galeria 1 -->
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Banana Lodge</mat-card-title>
+          <mat-card-subtitle>Puerto Misahuallí, Napo </mat-card-subtitle>
+        </mat-card-header>
+        <div class="contendcarrusel">
+          <div class="imagenes">
+            <input type="radio" name="slide" id="img1">
+            <input type="radio" name="slide" id="img2">
+            <input type="radio" name="slide" id="img3">
+  
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/171054829.jpg?k=eeae045b7f2646ddae099e12829caa357ea611b1b5c7504ec745c84dba81b9ed&o=&hp=1"
+              alt="hotel" class="img" class="m1">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/283767426.jpg?k=a4bcb9167fa6b7a51a17300a8d3c21d3bd04368b00174ffb2b538019fd3b8364&o=&hp=1"
+              alt="hotel" class="img" class="m2">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/283764963.jpg?k=07443a1296f78f7534c72871b7731d51565a1986c6ed7047c92cf6e45908d578&o=&hp=1"
+              alt="hotel" class="img" class="m3">
+  
+          </div>
+          <div class="puntos">
+            <label for="img1"></label>
+            <label for="img2"></label>
+            <label for="img3"></label>
+          </div>
+  
+        </div>
+        <mat-card-content>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <p>
+            Ofrece excursiones por la selva con muchas actividades y habitaciones limpias..
+          </p>
+          <h4> $ 59 Noche</h4>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)=" abrirInformacionHotelBanana()">Reservar</button>
+        </mat-card-actions>
+      </mat-card>
+      <!-- Galeria 2 -->
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Hostal Pakay </mat-card-title>
+          <mat-card-subtitle>Tena, Napo</mat-card-subtitle>
+        </mat-card-header>
+        <div id="contendcarrusel">
+          <div class="imagenes">
+            <input type="radio" name="slide" id="img4">
+            <input type="radio" name="slide" id="img5">
+            <input type="radio" name="slide" id="img6">
+  
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/218978949.jpg?k=59db8c1f1ab82af098da30ac9885ee23d8a0b478c48f4970d331a75e3d92dc35&o=&hp=1"
+              alt="hotel" class="img" class="m4">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/324857675.jpg?k=fecfe5ba00c624dbd7e6de4a2199d6ea05c6e1ab0f0deab3768bd999127df1bb&o=&hp=1"
+              alt="hotel" class="img" class="m5">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/216981977.jpg?k=5101da3fd8e60e923cf3fa56ff057d1e832d729103a67612ee1cbd469fa329c0&o=&hp=1"
+              alt="hotel" class="img" class="m6">
+  
+          </div>
+          <div class="puntos">
+            <label for="img4"></label>
+            <label for="img5"></label>
+            <label for="img6"></label>
+          </div>
+        </div>
+        <mat-card-content>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <p>
+            Ofrece jardín y habitaciones con WiFi gratuita. Hay aparcamiento privado gratuito 
+          </p>
+          <h4> $ 36 Noche</h4>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="abrirInformacionHotelPakay()">Reservar</button>
+        </mat-card-actions>
+      </mat-card>
+      <!-- Galeria 3 -->
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Selina Amazon Tena</mat-card-title>
+          <mat-card-subtitle>Tena, Napo </mat-card-subtitle>
+        </mat-card-header>
+        <div id="contendcarrusel">
+          <div class="imagenes">
+            <input type="radio" name="slide" id="img7">
+            <input type="radio" name="slide" id="img8">
+            <input type="radio" name="slide" id="img9">
+  
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/218832841.jpg?k=8c1079b241219d7d2386f5d1716b8957f13300989ccb66ddb0e3bcf64fe4444d&o=&hp=1"
+              alt="hotel" class="img" class="m7">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/218840098.jpg?k=52042b862215c0631cb9a15ad081cda44f0a951cf632250e3e46851b30adc843&o=&hp=1"
+              alt="hotel" class="img" class="m8">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/218843041.jpg?k=887b3e5afec9892be65fa9f183f5b9692d99f7558cb623964f387c1a4fb85ade&o=&hp=1"
+              alt="hotel" class="img" class="m9">
+  
+          </div>
+          <div class="puntos">
+            <label for="img7"></label>
+            <label for="img8"></label>
+            <label for="img9"></label>
+          </div>
+        </div>
+        <mat-card-content>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <p>
+            Ofrece habitaciones privadas y compartidas. Todas ofrecen vistas únicas al bosque o al río.
+          </p>
+          <h4> $ 41 Noche</h4>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="abrirInformacionHotelSelina()">Reservar</button>
+        </mat-card-actions>
+      </mat-card>
+      <!-- Galeria 4 -->
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Bunker593 Inn</mat-card-title>
+          <mat-card-subtitle>Tena, Napo </mat-card-subtitle>
+        </mat-card-header>
+        <div id="contendcarrusel">
+          <div class="imagenes">
+            <input type="radio" name="slide" id="img10">
+            <input type="radio" name="slide" id="img11">
+            <input type="radio" name="slide" id="img12">
+  
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/309528791.jpg?k=d157ba8f9059da68c345d749558fe2d76212442d2ae314652f07ce63b51fcb0b&o=&hp=1"
+              alt="hotel" class="img" class="m10">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/384760513.jpg?k=b7925f46ece15c0332f90e35fc2ff3f6ce7764612fc7328288067cb5f7836d34&o=&hp=1"
+              alt="hotel" class="img" class="m11">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/384760230.jpg?k=f2e724b1f6bfe5e09cdbf9a0452e5fa567cd3ed407c906ad3f82e1843a39b1df&o=&hp=1"
+              alt="hotel" class="img" class="m12">
+  
+          </div>
+          <div class="puntos">
+            <label for="img10"></label>
+            <label for="img11"></label>
+            <label for="img12"></label>
+          </div>
+        </div>
+        <mat-card-content>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <p>
+            Ofrece alojamiento con WiFi gratuita y aparcamiento privado gratuito.Hay una zona de salón compartida.
+          </p>
+          <h4> $ 42 Noche</h4>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="abrirInformacionHotelBunker()">Reservar</button>
+        </mat-card-actions>
+      </mat-card>
+      <!-- Galeria 5 -->
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Hamadryade Lodge</mat-card-title>
+          <mat-card-subtitle>Puerto Misahuallí, Napo </mat-card-subtitle>
+        </mat-card-header>
+        <div id="contendcarrusel">
+          <div class="imagenes">
+            <input type="radio" name="slide" id="img13">
+            <input type="radio" name="slide" id="img14">
+            <input type="radio" name="slide" id="img15">
+  
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/457748721.jpg?k=2d46f4a58f1a54ef2cb1d14023858dfc0fabca511f451235ae16a3619ea68564&o=&hp=1"
+              alt="hotel" class="img" class="m13">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/343332824.jpg?k=fc767218affc1eccfc73ad69670a094e59b2401d4a61d6f3bb92304c873547df&o=&hp=1"
+              alt="hotel" class="img" class="m14">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/34100236.jpg?k=3f10484426f4bafa0ed36e15da9690fa088d471167c032c1643128ac02232681&o=&hp=1"
+              alt="hotel" class="img" class="m15">
+  
+          </div>
+          <div class="puntos">
+            <label for="img13"></label>
+            <label for="img14"></label>
+            <label for="img15"></label>
+          </div>
+        </div>
+        <mat-card-content>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <p>
+            Ofrece elegantes bungalows con impresionantes vistas y una piscina al aire libre.
+          </p>
+          <h4> $ 135 Noche</h4>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="abrirInformacionHotelLodge()">Reservar</button>
+        </mat-card-actions>
+      </mat-card>
+  
+      <mat-card class="example-card">
+      <mat-card-header>
+          <mat-card-title>Misahualli Laguna Paikawe </mat-card-title>
+          <mat-card-subtitle>Puerto Misahuallí, Napo</mat-card-subtitle>
+        </mat-card-header>
+        <div id="contendcarrusel">
+          <div class="imagenes">
+            <input type="radio" name="slide" id="img16">
+            <input type="radio" name="slide" id="img17">
+            <input type="radio" name="slide" id="img18">
+  
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/321954884.jpg?k=ce92c6bd20449fdc4dce7e2e84d8d11f60fc4a5351a06c84cd3d2389c1981518&o=&hp=1"
+              alt="hotel" class="img" class="m16">
+            <img mat-card-image
+              src="https://q-xx.bstatic.com/xdata/images/hotel/max1000/85087456.jpg?k=d75404a9ee0fd75825e1448e83b0fd19ebe4a18d6b594d115f49752fb22a8bee"
+              alt="hotel" class="img" class="m17">
+            <img mat-card-image
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVrNm-zT185EQ0ITUWULZZBt_QFlnfcz6Qnw&usqp=CAU"
+              alt="hotel" class="img" class="m18">
+  
+          </div>
+          <div class="puntos">
+            <label for="img16"></label>
+            <label for="img17"></label>
+            <label for="img18"></label>
+          </div>
+  
+        </div>
+        <mat-card-content>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <p>
+            Ofrece WiFi gratuita, jardín, salón compartido y terraza.
+            Desayuno inglés/irlandés y americano a diario.
+          </p>
+          <h4> $ 32 Noche</h4>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="abrirInformacionHotelLaguna()">Reservar</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  
+  <!-- Opcion Galápagos-->
+  <div *ngIf="selectedDestiny==this.destinos[3].value">
+    <div class="contenedorP">
+      <!-- Galeria 1 -->
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Hotel Acacia</mat-card-title>
+          <mat-card-subtitle>Puerto Ayora, Galápagos</mat-card-subtitle>
+        </mat-card-header>
+        <div class="contendcarrusel">
+          <div class="imagenes">
+            <input type="radio" name="slide" id="img1">
+            <input type="radio" name="slide" id="img2">
+            <input type="radio" name="slide" id="img3">
+  
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/281768483.jpg?k=a443f3267c5c5413f1a9a723ab3fa046690dc56142f4b2c0912783292eaccbf6&o=&hp=1"
+              alt="hotel" class="img" class="m1">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/336111038.jpg?k=208f98888b3cd6a49e39d81cfd56dfca98bcd6fd78e175589f0e1f6c3c54656d&o=&hp=1"
+              alt="hotel" class="img" class="m2">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/281697915.jpg?k=5a377fd4754ffbaa8ba028c166b9224c4532b4e3fa8a2e759085a44ce6f206a5&o=&hp=1"
+              alt="hotel" class="img" class="m3">
+  
+          </div>
+          <div class="puntos">
+            <label for="img1"></label>
+            <label for="img2"></label>
+            <label for="img3"></label>
+          </div>
+  
+        </div>
+        <mat-card-content>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <p>
+            Ofrece jardín, salón compartido, terraza,bar,bañera de hidromasaje y servicio de conserjería.
+          </p>
+          <h4> $ 228 Noche</h4>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="abrirInformacionHotelAcacia()">Reservar</button>
+        </mat-card-actions>
+      </mat-card>
+      <!-- Galeria 2 -->
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Hostal Sueños Silvestres</mat-card-title>
+          <mat-card-subtitle>Puero Ayora,Galápagos</mat-card-subtitle>
+        </mat-card-header>
+        <div id="contendcarrusel">
+          <div class="imagenes">
+            <input type="radio" name="slide" id="img4">
+            <input type="radio" name="slide" id="img5">
+            <input type="radio" name="slide" id="img6">
+  
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/180072706.jpg?k=5c277aaf4f7b1d9f0dd757b9fb12c8345334139f432398e09b591bf337decc82&o=&hp=1"
+              alt="hotel" class="img" class="m4">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/180085287.jpg?k=13928260830ef944fd06d3c798d3aea9ba3c6081852f7c6f1333040076f04436&o=&hp=1"
+              alt="hotel" class="img" class="m5">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/180076116.jpg?k=33c9a33d520e82b6e35ed12dd2b3a658bd8c92eec417810a0290b7c793b8c5c8&o=&hp=1"
+              alt="hotel" class="img" class="m6">
+  
+          </div>
+          <div class="puntos">
+            <label for="img4"></label>
+            <label for="img5"></label>
+            <label for="img6"></label>
+          </div>
+        </div>
+        <mat-card-content>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <p>
+            Cuenta con terraza y vistas al jardín,WiFi en todas las instalaciones.
+            Dispone de cocina compartida
+          </p>
+          <h4> $ 54 Noche</h4>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="abrirInformacionHotelSueno()">Reservar</button>
+        </mat-card-actions>
+      </mat-card>
+      <!-- Galeria 3 -->
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Blu Sustainable Waterfront</mat-card-title>
+          <mat-card-subtitle>Puerto Ayora, Galápagos</mat-card-subtitle>
+        </mat-card-header>
+        <div id="contendcarrusel">
+          <div class="imagenes">
+            <input type="radio" name="slide" id="img7">
+            <input type="radio" name="slide" id="img8">
+            <input type="radio" name="slide" id="img9">
+  
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/434945050.jpg?k=88458a60dfc075ff95db4728becb58e40f24397eb6a5b04ad2853a31fdcacc32&o=&hp=1"
+              alt="hotel" class="img" class="m7">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/434764876.jpg?k=ec6947852f3e1216741309b42a9f567343736fb6648b2633bcd3d88866602ab6&o=&hp=1"
+              alt="hotel" class="img" class="m8">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/434764941.jpg?k=6839985a12e14ae98251633d21e79ae93dff40930079980950fd7d71fdfe0efa&o=&hp=1"
+              alt="hotel" class="img" class="m9">
+  
+          </div>
+          <div class="puntos">
+            <label for="img7"></label>
+            <label for="img8"></label>
+            <label for="img9"></label>
+          </div>
+        </div>
+        <mat-card-content>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <p>
+            Ofrece un alojamiento elegante con vistas al mar, WiFi gratuita y comodidades de alta calidad.
+          </p>
+          <h4> $ 236 Noche</h4>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)=" abrirInformacionHotelBlu()">Reservar</button>
+        </mat-card-actions>
+      </mat-card>
+      <!-- Galeria 4 -->
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>The Isabela Beach House</mat-card-title>
+          <mat-card-subtitle>Puerto Villamil, Galápagos</mat-card-subtitle>
+        </mat-card-header>
+        <div id="contendcarrusel">
+          <div class="imagenes">
+            <input type="radio" name="slide" id="img10">
+            <input type="radio" name="slide" id="img11">
+            <input type="radio" name="slide" id="img12">
+  
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/117551293.jpg?k=9a0d30fea675d9257a2d53cf7c5fca3d8084c82a20b66e405e4cd3427eb3636d&o=&hp=1"
+              alt="hotel" class="img" class="m10">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/117509154.jpg?k=f4cb73f6adc2b342123034a55599d4636d575def0382b5a21b01ae8316f8bf6e&o=&hp=1"
+              alt="hotel" class="img" class="m11">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/45444758.jpg?k=a6e8156447ae1d7bfa4157c892daab6251706c51361fa58a8b9a4508b9b10afb&o=&hp=1"
+              alt="hotel" class="img" class="m12">
+  
+          </div>
+          <div class="puntos">
+            <label for="img10"></label>
+            <label for="img11"></label>
+            <label for="img12"></label>
+          </div>
+        </div>
+        <mat-card-content>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <p>
+            Dispone de WiFi gratuita, zona de playa privada, jardín y terraza.Se sirve un desayuno americano.
+          </p>
+          <h4> $ 149 Noche</h4>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="abrirInformacionHotelIsabela()">Reservar</button>
+        </mat-card-actions>
+      </mat-card>
+      <!-- Galeria 5 -->
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Cactus</mat-card-title>
+          <mat-card-subtitle>Puerto Baquerizo Moreno, Galápagos</mat-card-subtitle>
+        </mat-card-header>
+        <div id="contendcarrusel">
+          <div class="imagenes">
+            <input type="radio" name="slide" id="img13">
+            <input type="radio" name="slide" id="img14">
+            <input type="radio" name="slide" id="img15">
+  
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/217396485.jpg?k=4ca06b36894c33a0f21c0a7da82f2db46e733f081ab9d42809ddf854269d8e92&o=&hp=1"
+              alt="hotel" class="img" class="m13">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/403445186.jpg?k=82f0572dfa98ec750160fa0b23fcf35d31dcc026905679ac95978aa057daf4cc&o=&hp=1"
+              alt="hotel" class="img" class="m14">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/217396496.jpg?k=6208eba71ba5f686697ebb0f0634bd2651685416d3795738ab876e012caad7df&o=&hp=1"
+              alt="hotel" class="img" class="m15">
+  
+          </div>
+          <div class="puntos">
+            <label for="img13"></label>
+            <label for="img14"></label>
+            <label for="img15"></label>
+          </div>
+        </div>
+        <mat-card-content>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <p>
+            Ofrece habitaciones con aire acondicionado, WiFi gratuita y registro de entrada y salida exprés.
+          </p>
+          <h4> $ 120 Noche</h4>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="abrirInformacionHotelCactus()">Reservar</button>
+        </mat-card-actions>
+      </mat-card>
+      <!-- Galeria 6 -->
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Ikala Galapagos Hotel </mat-card-title>
+          <mat-card-subtitle>Puerto Ayora, Galápagos</mat-card-subtitle>
+        </mat-card-header>
+        <div id="contendcarrusel">
+          <div class="imagenes">
+            <input type="radio" name="slide" id="img16">
+            <input type="radio" name="slide" id="img17">
+            <input type="radio" name="slide" id="img18">
+  
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/127690175.jpg?k=d1a9ed5c5c370bd126bebd2d1cca4ef6e9f9fc1342672081c693c4925d7cd528&o=&hp=1"
+              alt="hotel" class="img" class="m16">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/144375086.jpg?k=847e9dfb097af71a263ac4d7e25aa4716344ece8e99ba6c67751b2bf11ab2ef3&o=&hp=1"
+              alt="hotel" class="img" class="m17">
+            <img mat-card-image
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/223827259.jpg?k=5b6f108e63b557a538f68b31b444ae24601494f7916bb9f88cc2e9ddbf7df639&o=&hp=1"
+              alt="hotel" class="img" class="m18">
+  
+          </div>
+          <div class="puntos">
+            <label for="img16"></label>
+            <label for="img17"></label>
+            <label for="img18"></label>
+          </div>
+  
+        </div>
+        <mat-card-content>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <span class="material-symbols-outlined">
+            star
+          </span>
+          <p>
+            Dispone de restaurante, piscina al aire libre, bar y jardín.Se sirve un desayuno buffet o vegetariano.
+          </p>
+          <h4> $ 244 Noche</h4>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="abrirInformacionHotelIkala()">Reservar</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>

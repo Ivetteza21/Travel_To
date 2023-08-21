@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+h2{
+    background-image: url('https://img.freepik.com/foto-gratis/plantilla-web-estudio-diseno-diseno-fondo-naranja-abstracto-informe-comercial-color-degradado-circulo-suave_1258-101648.jpg?w=826&t=st=1686510367~exp=1686510967~hmac=268278a18c27eda68388f23c592b31d1ca7d5e69bcf99a526c6bd4dd3e96889f');
+    height: 80px;
+    
+}
+
+.date{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.individual img{
+    width: 200px;   
+}
+
+.individual{
+    margin-top: 15px;
+    display: flex;
+}
+
+
+.content h3{
+    color: black;
+    padding-left: 4%;
+}
+
+.content{
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.info{
+    display: flex;
+    font-size: small;
+}
+
+#call{
+   padding-left: 20px;
+}
+
+.infoHabita{
+    display: flex;
+    margin-top: 35px;
+    margin-left: -140px; 
+    font-family: 'Poppins', sans-serif;
+    justify-items: flex-end;
+}
+
+.infoHabita p{
+    font-size: small;
+}
+
+.wifi{
+    padding-top: 30px;
+    margin-left:-159px;
+    display: flex;
+}
+
+.baño{
+    padding-top: 58px;
+    margin-left: -98px;
+    display: flex;
+}
+
+.botonR{
+    margin-left: 500px;
+    margin-top: 0%;
+}
+
+button{
+    background-color:#ff7800;
+    border-radius: 6px;
+    border: 0;
+    width: 100%;
+    height: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#precio{
+    padding-left: 100px;
+}
+
+.camita{
+    margin-left: -200px;
+    display: flex;
+}
+
+mat-card{
+    margin-bottom: 13px;
+}
+
+.cancelar{
+    width: 90px;
+    background-color: rgba(255, 0, 0, 0.726);
+}

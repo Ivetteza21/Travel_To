@@ -1,0 +1,130 @@
+.reservarConte{
+    width: 500px;
+}
+
+h1{
+    background-image: url('https://img.freepik.com/foto-gratis/plantilla-web-estudio-diseno-diseno-fondo-naranja-abstracto-informe-comercial-color-degradado-circulo-suave_1258-101648.jpg?w=826&t=st=1686510367~exp=1686510967~hmac=268278a18c27eda68388f23c592b31d1ca7d5e69bcf99a526c6bd4dd3e96889f');
+    height: 50px;
+}
+
+.example-action-buttons {
+    padding-bottom: 20px;
+  }
+  
+  .example-headers-align .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  
+  .example-headers-align .mat-mdc-form-field + .mat-mdc-form-field {
+    margin-left: 8px;
+    display: block;
+    width: 197px;
+  }
+
+  .info{
+    display: flex;
+  }
+
+
+.cancelar{
+    background-color: rgba(255, 0, 0, 0.63);
+  }
+
+.aceptar{
+    background-color:#ff7800 ;
+}
+
+.pago{
+  background-color: #ff770093;
+}
+
+.Confirmacion{
+  display: none;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;1,100&display=swap');
+@media only screen and (max-width:800px) {
+    /* For tablets: */
+    .main {
+      width: 80%;
+      padding: 0;
+    }
+    .right {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width:500px) {
+    /* For mobile phones: */
+    .menu, .main, .right {
+      width: 100%;
+    }
+  }
+
+  .contenedor-todo{
+    flex: 1 1 30rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 1rem 2rem rgba(0.3, 0.3, 0.1, 0.1);
+    background-color: white;
+    text-align: center;
+    /* padding: 30px;
+    margin-left: 30px;
+    margin-right: 30px; */
+    margin-top: 30px;
+    /* margin-block-end: 30px; */
+
+}
+
+.texto-titulo{
+    font-size: 20px;
+}
+.espacio-iconos{
+    margin-left: 20px;
+
+}
+.imagenes-forma-de-pago{
+    margin-top: 10px;
+}
+/*Formulario*/
+#input-fecha-venc{
+    width: 160px;
+    font-size: .8rem;
+    
+}
+#input-cvv{
+    width: 96px;
+    font-size: .8rem;
+    margin-left: 10px;
+}
+.inputs{
+    color: black;
+    padding: 15px;
+    margin: 8px 0;
+    cursor: pointer;
+    background-color: #ebebeb;
+    border-radius: 6px;
+    font-size:.8rem;
+    border-style: none;
+    width: 300px;
+}
+.texto{
+    margin-top: 10px;
+    color: gray ;
+}
+/*estilo icono tarjeta*/
+.contenedor-tarjeta{
+    position: relative;
+    
+}
+#icono-tarjeta{
+    position: absolute;
+    font-size: 25px;
+    left: 370px;
+    top: 20px;
+}
+#iconos{
+    margin-left: 10px;
+}

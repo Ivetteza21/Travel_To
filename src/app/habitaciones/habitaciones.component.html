@@ -1,0 +1,2251 @@
+<!-- links de iconos -->
+<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+<!-- Quito -->
+<!-- Hotel casona de la ronda -->
+<div *ngIf="mostrarInformacion">
+  <h2 mat-dialog-title>Elegir habitación</h2>
+  <mat-dialog-content class="content">
+    <div class="info">
+      <span class="material-symbols-outlined">
+        location_on
+      </span>
+      <p>Calle Morales OE1- 160 Centro Histórico, Quito 170104 Ecuador</p>
+      <span class="material-symbols-outlined" id="call">
+        call
+      </span>
+      <p>(02) 228-7501</p>
+    </div>
+    <div class="date ">
+      <mat-form-field>
+        <mat-label>Ingrese un rango de fecha</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Llegada">
+          <input matEndDate placeholder="Salida">
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+    </div>
+    <!-- habitacion individual -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image
+          src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/24/4e/49/la-casona-de-la-ronda.jpg?w=1200&h=-1&s=1">
+        <h3>Habitación estandar</h3>
+        <h3 id="precio">$133 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>cama doble grande</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- habitacion doble -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image src="https://cf.bstatic.com/images/hotel/max1024x768/206/206314312.jpg">
+        <h3>Habitación doble</h3>
+        <h3 id="precio">$147 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p> 2 camas individuales</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- suite -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image src="https://cf.bstatic.com/images/hotel/max1024x768/206/206315609.jpg">
+        <h3>Suite Presidencial </h3>
+        <h3 id="precio">$166 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>dos camas grandes </p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close class="cancelar">Cancelar</button>
+  </mat-dialog-actions>
+</div>
+
+<!-- La Quinta by Wyndham -->
+<div *ngIf="mostrarInformacionQuinta">
+  <h2 mat-dialog-title>Elegir habitación</h2>
+  <mat-dialog-content class="content">
+    <div class="info">
+      <span class="material-symbols-outlined">
+        location_on
+      </span>
+      <p>Av. de los Shyris 37-53 y Naciones Unidas, Quito, Ecuador 170506</p>
+      <span class="material-symbols-outlined" id="call">
+        call
+      </span>
+      <p>(02)2445305</p>
+    </div>
+    <div class="date ">
+      <mat-form-field>
+        <mat-label>Ingrese un rango de fecha</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Llegada">
+          <input matEndDate placeholder="Salida">
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+    </div>
+    <!-- habitacion individual -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image
+          src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/441685610.jpg?k=e71e9f7432a233dbc943bf58bfbfb27bc8b42f5f11b2e478932a7e38669f4838&o=&hp=1">
+        <h3>Habitación estandar</h3>
+        <h3 id="precio">$70 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>cama doble grande</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- habitacion doble -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image
+          src="https://www.wyndhamhotels.com/content/dam/property-images/en-us/lq/ec/others/quito/57730/57730_guest_room_ndd1_1.jpg?crop=4572:3048;*,*&downsize=1800:*">
+        <h3>Habitación doble</h3>
+        <h3 id="precio">$90 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>dos camas individuales</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- suite -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image
+          src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/441685609.jpg?k=0a5ebeeeb39763e075c813a84f240fced0049b14ff37381db68e767b5df9d0fd&o=&hp=1">
+        <h3>Suite Presidencial </h3>
+        <h3 id="precio">$106 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>dos camas grandes </p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close class="cancelar">Cancelar</button>
+  </mat-dialog-actions>
+</div>
+
+<!-- Hotel vieja Cuba -->
+<div *ngIf="mostrarInformacionCuba">
+  <h2 mat-dialog-title>Elegir habitación</h2>
+  <mat-dialog-content class="content">
+    <div class="info">
+      <span class="material-symbols-outlined">
+        location_on
+      </span>
+      <p>La Niña N26-202 y Diego de Almagro, 170150 Quito, Ecuador</p>
+      <span class="material-symbols-outlined" id="call">
+        call
+      </span>
+      <p>(02)2445334</p>
+    </div>
+    <div class="date ">
+      <mat-form-field>
+        <mat-label>Ingrese un rango de fecha</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Llegada">
+          <input matEndDate placeholder="Salida">
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+    </div>
+    <!-- habitacion individual -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image
+          src="https://images.trvl-media.com/lodging/4000000/3530000/3520200/3520108/51b8399c.jpg?impolicy=resizecrop&rw=1200&ra=fit">
+        <h3>Habitación estandar</h3>
+        <h3 id="precio">$82 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>cama doble grande</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- habitacion doble -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image
+          src="https://images.trvl-media.com/lodging/4000000/3530000/3520200/3520108/2e93ad60.jpg?impolicy=resizecrop&rw=1200&ra=fit">
+        <h3>Habitación Triple...</h3>
+        <h3 id="precio">$98 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>Tres camas individuales</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- suite -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image
+          src="https://images.trvl-media.com/lodging/4000000/3530000/3520200/3520108/a5b7684a.jpg?impolicy=resizecrop&rw=1200&ra=fit">
+        <h3>Habitación Quadruple</h3>
+        <h3 id="precio">$110 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>cuatro camas peque </p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close class="cancelar">Cancelar</button>
+  </mat-dialog-actions>
+</div>
+
+<!-- Hotel David -->
+<div *ngIf="mostrarInformacionDavid">
+  <h2 mat-dialog-title>Elegir habitación</h2>
+  <mat-dialog-content class="content">
+    <div class="info">
+      <span class="material-symbols-outlined">
+        location_on
+      </span>
+      <p>Pasaje José Marti E4-53 y Av. Gran Colombia, Centro histórico, 170136 Quito, Ecuador </p>
+      <span class="material-symbols-outlined" id="call">
+        call
+      </span>
+      <p>(02)2565334</p>
+    </div>
+    <div class="date ">
+      <mat-form-field>
+        <mat-label>Ingrese un rango de fecha</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Llegada">
+          <input matEndDate placeholder="Salida">
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+    </div>
+    <!-- habitacion individual -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image
+          src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/199781456.jpg?k=df7f2efd77b0156a940728d9d0f3d86d98812a4215583ee3ae0f1e5b7b0423c8&o=&hp=1">
+        <h3>Habitación estandar</h3>
+        <h3 id="precio">$30 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>cama doble grande</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- habitacion doble -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image
+          src="https://images.trvl-media.com/lodging/30000000/29100000/29098900/29098840/7474f123.jpg?impolicy=resizecrop&rw=1200&ra=fit">
+        <h3>Habitación familiar</h3>
+        <h3 id="precio">$43 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>Tres camas individuales</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- suite -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image
+          src="https://images.trvl-media.com/lodging/30000000/29100000/29098900/29098840/bf08b35b.jpg?impolicy=resizecrop&rw=1200&ra=fit">
+        <h3>Suite Elite con balcón</h3>
+        <h3 id="precio">$50 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>cama King grande </p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close class="cancelar">Cancelar</button>
+  </mat-dialog-actions>
+</div>
+
+<!-- Hotel Bellavista -->
+<div *ngIf="mostrarInformacionBella">
+  <h2 mat-dialog-title>Elegir habitación</h2>
+  <mat-dialog-content class="content">
+    <div class="info">
+      <span class="material-symbols-outlined">
+        location_on
+      </span>
+      <p>Pasaje Lafayette N32-51 y Calle Bosmediano, 170122 Quito, Ecuador </p>
+      <span class="material-symbols-outlined" id="call">
+        call
+      </span>
+      <p>(02)2589634</p>
+    </div>
+    <div class="date ">
+      <mat-form-field>
+        <mat-label>Ingrese un rango de fecha</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Llegada">
+          <input matEndDate placeholder="Salida">
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+    </div>
+    <!-- habitacion individual -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image
+          src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/57695131.jpg?k=f76be67be7e47ecd60f55924a099be08c8a335382cb5968a683de6adf6bd4e30&o=&hp=1">
+        <h3>Habitación estandar</h3>
+        <h3 id="precio">$46 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>cama doble grande</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- habitacion doble -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image src="https://cf.bstatic.com/images/hotel/max1024x768/569/56932394.jpg">
+        <h3>Habitación familiar</h3>
+        <h3 id="precio">$55 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>dos camas individuales</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close class="cancelar">Cancelar</button>
+  </mat-dialog-actions>
+</div>
+
+<!-- Hotel Friends Hotel & Rooftop -->
+<div *ngIf="mostrarInformacionFriend">
+  <h2 mat-dialog-title>Elegir habitación</h2>
+  <mat-dialog-content class="content">
+    <div class="info">
+      <span class="material-symbols-outlined">
+        location_on
+      </span>
+      <p>Junin Street Oe1-61 y Gral. Juan Jose Flores St, Centro histórico, 170401</p>
+      <span class="material-symbols-outlined" id="call">
+        call
+      </span>
+      <p>096 092 0967</p>
+    </div>
+    <div class="date ">
+      <mat-form-field>
+        <mat-label>Ingrese un rango de fecha</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Llegada">
+          <input matEndDate placeholder="Salida">
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+    </div>
+    <!-- habitacion individual -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image
+          src="https://images.trvl-media.com/lodging/16000000/15050000/15046300/15046242/224a7120.jpg?impolicy=resizecrop&rw=1200&ra=fit">
+        <h3>Habitación estandar</h3>
+        <h3 id="precio">$70 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>cama doble grande</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- habitacion doble -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image src="https://images.trvl-media.com/lodging/16000000/15050000/15046300/15046242/0645e37d.jpg?impolicy=resizecrop&rw=1200&ra=fit">
+        <h3>Habitación deluxe 2</h3>
+        <h3 id="precio">$75 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p> Cama grande king</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+      <!-- habitacion doble -->
+      <mat-card>
+        <mat-card-content class="individual">
+          <img mat-card-image src="https://images.trvl-media.com/lodging/16000000/15050000/15046300/15046242/51c4b849.jpg?impolicy=resizecrop&rw=1200&ra=fit">
+          <h3>Departamento deluxe</h3>
+          <h3 id="precio">$100 Noche</h3>
+          <div class="infoHabita">
+            <div class="camita">
+              <span class="material-symbols-outlined" id="camita">
+                bed
+              </span>
+              <p>2 Camas grandes</p>
+            </div>
+            <div class="wifi">
+              <span class="material-symbols-outlined">
+                wifi
+              </span>
+              <p>Wifi Gratis</p>
+            </div>
+            <div class="baño">
+              <span class="material-symbols-outlined">
+                shower
+              </span>
+              <p>Baño privado</p>
+            </div>
+          </div>
+        </mat-card-content>
+        <mat-card-actions class="botonR">
+          <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close class="cancelar">Cancelar</button>
+  </mat-dialog-actions>
+</div>
+
+<!-- Napo -->
+<!-- Hotel Banana Lodge -->
+<div *ngIf="mostrarInformacionBanana">
+  <h2 mat-dialog-title>Elegir habitación</h2>
+  <mat-dialog-content class="content">
+    <div class="info">
+      <span class="material-symbols-outlined">
+        location_on
+      </span>
+      <p>Via Al Pununo, 150155 Puerto Misahuallí, Ecuador </p>
+      <span class="material-symbols-outlined" id="call">
+        call
+      </span>
+      <p>098885169</p>
+    </div>
+    <div class="date ">
+      <mat-form-field>
+        <mat-label>Ingrese un rango de fecha</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Llegada">
+          <input matEndDate placeholder="Salida">
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+    </div>
+    <!-- habitacion individual -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image
+          src="https://cf.bstatic.com/images/hotel/max1024x768/283/283767518.jpg">
+        <h3>Habitación estandar</h3>
+        <h3 id="precio">$59 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>cama doble grande</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- habitacion doble -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image src="https://cf.bstatic.com/images/hotel/max1024x768/283/283767188.jpg">
+        <h3>Habitación doble</h3>
+        <h3 id="precio">$65 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p> dos camas individuales</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- suite -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image src="https://cf.bstatic.com/images/hotel/max1024x768/283/283752030.jpg">
+        <h3>Habitación familiar </h3>
+        <h3 id="precio">$166 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>1 cama grande y 2 camas </p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close class="cancelar">Cancelar</button>
+  </mat-dialog-actions>
+</div>
+
+<!-- Hotel Hostal Pakay -->
+<div *ngIf="mostrarInformacionPakay">
+  <h2 mat-dialog-title>Elegir habitación</h2>
+  <mat-dialog-content class="content">
+    <div class="info">
+      <span class="material-symbols-outlined">
+        location_on
+      </span>
+      <p> Av. Antisana y Manuel M. Rosales Barrio 30 de Diciembre,150150 Tena,Ecuador</p>
+      <span class="material-symbols-outlined" id="call">
+        call
+      </span>
+      <p>0984565169</p>
+    </div>
+    <div class="date ">
+      <mat-form-field>
+        <mat-label>Ingrese un rango de fecha</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Llegada">
+          <input matEndDate placeholder="Salida">
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+    </div>
+    <!-- habitacion individual -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image
+          src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/324857675.jpg?k=fecfe5ba00c624dbd7e6de4a2199d6ea05c6e1ab0f0deab3768bd999127df1bb&o=&hp=1">
+        <h3>Habitación estandar</h3>
+        <h3 id="precio">$22 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>cama doble grande</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- habitacion doble -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image src="https://cf.bstatic.com/images/hotel/max1024x768/324/324855518.jpg">
+        <h3>Habitación doble</h3>
+        <h3 id="precio">$30 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p> dos camas individuales</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- suite -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image src="https://cf.bstatic.com/images/hotel/max1024x768/162/162114518.jpg">
+        <h3>Habitación familiar </h3>
+        <h3 id="precio">$59 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>1 cama grande y 2 camas </p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close class="cancelar">Cancelar</button>
+  </mat-dialog-actions>
+</div>
+
+<!-- Hotel Selina Amazon Tena -->
+<div *ngIf="mostrarInformacionSelina">
+  <h2 mat-dialog-title>Elegir habitación</h2>
+  <mat-dialog-content class="content">
+    <div class="info">
+      <span class="material-symbols-outlined">
+        location_on
+      </span>
+      <p> Km 10 Via Ahuano, Tena, 150150 Tena, Ecuador</p>
+      <span class="material-symbols-outlined" id="call">
+        call
+      </span>
+      <p>0979565169</p>
+    </div>
+    <div class="date ">
+      <mat-form-field>
+        <mat-label>Ingrese un rango de fecha</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Llegada">
+          <input matEndDate placeholder="Salida">
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+    </div>
+    <!-- habitacion individual -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image
+          src="https://images.trvl-media.com/lodging/2000000/1390000/1385800/1385768/58d1bce3.jpg?impolicy=resizecrop&rw=1200&ra=fit">
+        <h3>Habitación estandar</h3>
+        <h3 id="precio">$41 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>cama doble grande</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- habitacion doble -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image src="https://images.trvl-media.com/lodging/2000000/1390000/1385800/1385768/3bbe2058.jpg?impolicy=resizecrop&rw=1200&ra=fit">
+        <h3>Habitación doble</h3>
+        <h3 id="precio">$45 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p> dos camas individuales</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- suite -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image src="https://images.trvl-media.com/lodging/2000000/1390000/1385800/1385768/11e4b3bd.jpg?impolicy=resizecrop&rw=1200&ra=fit">
+        <h3>Habitación familiar </h3>
+        <h3 id="precio">$53 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>4 camas pequeñas </p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close class="cancelar">Cancelar</button>
+  </mat-dialog-actions>
+</div>
+
+<!-- Hotel Bunker593 Inn-->
+<div *ngIf="mostrarInformacionBunker">
+  <h2 mat-dialog-title>Elegir habitación</h2>
+  <mat-dialog-content class="content">
+    <div class="info">
+      <span class="material-symbols-outlined">
+        location_on
+      </span>
+      <p> Km 10 Via Ahuano, Tena, 150150 Tena, Ecuador</p>
+      <span class="material-symbols-outlined" id="call">
+        call
+      </span>
+      <p>0979565169</p>
+    </div>
+    <div class="date ">
+      <mat-form-field>
+        <mat-label>Ingrese un rango de fecha</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Llegada">
+          <input matEndDate placeholder="Salida">
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+    </div>
+    <!-- habitacion individual -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image
+          src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/384760188.jpg?k=5af79479e7efd4ead4524aa6738f90809f26912c78ce68bff87da8baf66eb830&o=&hp=1">
+        <h3>Habitación estandar</h3>
+        <h3 id="precio">$42 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>cama doble grande</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- habitacion doble -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image src="https://cf.bstatic.com/images/hotel/max1024x768/426/426255495.jpg">
+        <h3>Habitación doble</h3>
+        <h3 id="precio">$49 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p> dos camas individuales</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- suite -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image src="https://cf.bstatic.com/images/hotel/max1024x768/311/311843991.jpg">
+        <h3>Departamento deluxe </h3>
+        <h3 id="precio">$53 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>Cama doble grande </p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close class="cancelar">Cancelar</button>
+  </mat-dialog-actions>
+</div>
+
+<!-- Hotel Hamadryade Lodge -->
+<div *ngIf="mostrarInformacionLodge">
+  <h2 mat-dialog-title>Elegir habitación</h2>
+  <mat-dialog-content class="content">
+    <div class="info">
+      <span class="material-symbols-outlined">
+        location_on
+      </span>
+      <p> Via Misahualli, km 11, 150150 Puerto Misahuallí, Ecuador</p>
+      <span class="material-symbols-outlined" id="call">
+        call
+      </span>
+      <p>(06) 299-9140</p>
+    </div>
+    <div class="date ">
+      <mat-form-field>
+        <mat-label>Ingrese un rango de fecha</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Llegada">
+          <input matEndDate placeholder="Salida">
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+    </div>
+    <!-- habitacion individual -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image
+          src="https://images.trvl-media.com/lodging/5000000/4310000/4304600/4304585/7b1ba90f.jpg?impolicy=resizecrop&rw=1200&ra=fit">
+        <h3>Habitación estandar</h3>
+        <h3 id="precio">$75 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>cama doble grande</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- habitacion doble -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image src="https://images.trvl-media.com/lodging/5000000/4310000/4304600/4304585/3d61d05e.jpg?impolicy=resizecrop&rw=1200&ra=fit">
+        <h3>Habitación doble</h3>
+        <h3 id="precio">$80 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p> dos camas individuales</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- suite -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image src="https://images.trvl-media.com/lodging/5000000/4310000/4304600/4304585/94ba1cad.jpg?impolicy=resizecrop&rw=1200&ra=fit">
+        <h3>Departamento deluxe </h3>
+        <h3 id="precio">$135 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>Cama doble grande </p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close class="cancelar">Cancelar</button>
+  </mat-dialog-actions>
+</div>
+
+<!-- Hotel Misahualli Laguna  -->
+<div *ngIf="mostrarInformacionLaguna">
+  <h2 mat-dialog-title>Elegir habitación</h2>
+  <mat-dialog-content class="content">
+    <div class="info">
+      <span class="material-symbols-outlined">
+        location_on
+      </span>
+      <p>Paikawe Reserve diagonal a restaurante el Jardín,150155 Puerto Misahuallí, Ecuador</p>
+      <span class="material-symbols-outlined" id="call">
+        call
+      </span>
+      <p>(06) 299-5678</p>
+    </div>
+    <div class="date ">
+      <mat-form-field>
+        <mat-label>Ingrese un rango de fecha</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Llegada">
+          <input matEndDate placeholder="Salida">
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+    </div>
+    <!-- habitacion individual -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image
+          src="https://cf.bstatic.com/images/hotel/max1024x768/323/323497795.jpg">
+        <h3>Habitación estandar</h3>
+        <h3 id="precio">$20 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>cama doble grande</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- habitacion doble -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image src="https://cf.bstatic.com/images/hotel/max1024x768/334/334279067.jpg">
+        <h3>Habitación doble</h3>
+        <h3 id="precio">$25 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p> dos camas individuales</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- suite -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image src="https://cf.bstatic.com/images/hotel/max1024x768/334/334279180.jpg">
+        <h3>Habitación compartida</h3>
+        <h3 id="precio">$35 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>4 camas pequeñas </p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close class="cancelar">Cancelar</button>
+  </mat-dialog-actions>
+</div>
+
+<!-- Galapagos -->
+<!-- Hotel Acacia -->
+<div *ngIf="mostrarInformacionAcacia">
+  <h2 mat-dialog-title>Elegir habitación</h2>
+  <mat-dialog-content class="content">
+    <div class="info">
+      <span class="material-symbols-outlined">
+        location_on
+      </span>
+      <p>C/ Floreana y Matazarnos, 200350 Puerto Ayora, Ecuador</p>
+      <span class="material-symbols-outlined" id="call">
+        call
+      </span>
+      <p> 098 244 4202</p>
+    </div>
+    <div class="date ">
+      <mat-form-field>
+        <mat-label>Ingrese un rango de fecha</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Llegada">
+          <input matEndDate placeholder="Salida">
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+    </div>
+    <!-- habitacion individual -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image
+          src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/281697879.jpg?k=e916867fa92dcdd1ee607b7fe67e4c0f788ace4b6f7ab4bce3a0b084d84431d6&o=&hp=1">
+        <h3>Habitación estandar</h3>
+        <h3 id="precio">$228 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>cama doble grande</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- habitacion doble -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image src="https://images.trvl-media.com/lodging/92000000/91760000/91753200/91753116/674d6ff5.jpg?impolicy=resizecrop&rw=1200&ra=fit">
+        <h3>Habitación Triple</h3>
+        <h3 id="precio">$335 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p> 3 camas individuales</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- suite -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image src="https://images.trvl-media.com/lodging/92000000/91760000/91753200/91753116/d7535718.jpg?impolicy=resizecrop&rw=1200&ra=fit">
+        <h3>Habitación deluxe </h3>
+        <h3 id="precio">$400 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>cama grande con balcón </p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close class="cancelar">Cancelar</button>
+  </mat-dialog-actions>
+</div>
+
+<!-- Hotel Sueños Silvestres -->
+<div *ngIf="mostrarInformacionSuenos">
+  <h2 mat-dialog-title>Elegir habitación</h2>
+  <mat-dialog-content class="content">
+    <div class="info">
+      <span class="material-symbols-outlined">
+        location_on
+      </span>
+      <p>Calle 18 de Febrero y Calle Marchena S/N, 200350 Puerto Ayora, Ecuador</p>
+      <span class="material-symbols-outlined" id="call">
+        call
+      </span>
+      <p> 099 271 9274</p>
+    </div>
+    <div class="date ">
+      <mat-form-field>
+        <mat-label>Ingrese un rango de fecha</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Llegada">
+          <input matEndDate placeholder="Salida">
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+    </div>
+    <!-- habitacion individual -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image
+          src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/180076226.jpg?k=70ab33c78707274d367a3018c99aa426de27d6470e36a53cf7d40837fc2255e4&o=&hp=1">
+        <h3>Habitación estandar</h3>
+        <h3 id="precio">$54 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>cama doble grande</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- habitacion doble -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/180076116.jpg?k=33c9a33d520e82b6e35ed12dd2b3a658bd8c92eec417810a0290b7c793b8c5c8&o=&hp=1">
+        <h3>Habitación doble</h3>
+        <h3 id="precio">$70 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p> 2 camas individuales</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- suite -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/180085287.jpg?k=13928260830ef944fd06d3c798d3aea9ba3c6081852f7c6f1333040076f04436&o=&hp=1">
+        <h3>Habitación deluxe </h3>
+        <h3 id="precio">$100 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>cama grande con sofá</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close class="cancelar">Cancelar</button>
+  </mat-dialog-actions>
+</div>
+
+<!-- Hotel Blu Sustainable Waterfront -->
+<div *ngIf="mostrarInformacionBlu">
+  <h2 mat-dialog-title>Elegir habitación</h2>
+  <mat-dialog-content class="content">
+    <div class="info">
+      <span class="material-symbols-outlined">
+        location_on
+      </span>
+      <p>Avenida Charles Darwin S/N Y Piqueros, EC200350 Puerto Ayora, Ecuador</p>
+      <span class="material-symbols-outlined" id="call">
+        call
+      </span>
+      <p> 099 271 9256</p>
+    </div>
+    <div class="date ">
+      <mat-form-field>
+        <mat-label>Ingrese un rango de fecha</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Llegada">
+          <input matEndDate placeholder="Salida">
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+    </div>
+    <!-- habitacion individual -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image
+          src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/456488146.jpg?k=1484574fb6cb17a07e0d7c5fb7b773654e41eb2ed93c4f578da8159bc87a1af4&o=&hp=1">
+        <h3>Habitación estandar</h3>
+        <h3 id="precio">$236 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>cama doble grande</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- habitacion doble -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/434769237.jpg?k=85f89a7048f1f2a735d9611ddbbb029f12c2dbcaf411dc10f2ececbcc3ae698b&o=&hp=1">
+        <h3>Habitación doble</h3>
+        <h3 id="precio">$270 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p> 2 camas individuales</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- suite -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/434769222.jpg?k=f4b6fd2494fbc15dac68aaedf3670ad831935bce3e609400a5a2d8c4cae87f10&o=&hp=1">
+        <h3>Habitación deluxe </h3>
+        <h3 id="precio">$325 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>cama grande con sofá</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close class="cancelar">Cancelar</button>
+  </mat-dialog-actions>
+</div>
+
+<!-- Hotel The Isabela Beach House -->
+<div *ngIf="mostrarInformacionIsabela">
+  <h2 mat-dialog-title>Elegir habitación</h2>
+  <mat-dialog-content class="content">
+    <div class="info">
+      <span class="material-symbols-outlined">
+        location_on
+      </span>
+      <p> Conocarpus and Beach, 200250 Puerto Villamil, Ecuador</p>
+      <span class="material-symbols-outlined" id="call">
+        call
+      </span>
+      <p> 092 271 7856</p>
+    </div>
+    <div class="date ">
+      <mat-form-field>
+        <mat-label>Ingrese un rango de fecha</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Llegada">
+          <input matEndDate placeholder="Salida">
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+    </div>
+    <!-- habitacion individual -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image
+          src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/215529368.jpg?k=ce2767e9622c56f993dc970b4e9f409c814218d198f3f279d4da27aa375a043e&o=&hp=1">
+        <h3>Habitación estandar</h3>
+        <h3 id="precio">$149 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>cama doble grande</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- habitacion doble -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/117509154.jpg?k=f4cb73f6adc2b342123034a55599d4636d575def0382b5a21b01ae8316f8bf6e&o=&hp=1">
+        <h3>Habitación doble</h3>
+        <h3 id="precio">$200 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p> 2 camas individuales</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- suite -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/215536932.jpg?k=2532ff5e1015282b3d7a9a371e179a8c6d1439538acd55afe3026a9d7e38e79f&o=&hp=1">
+        <h3>Habitación deluxe </h3>
+        <h3 id="precio">$225 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>cama grande con sofá</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close class="cancelar">Cancelar</button>
+  </mat-dialog-actions>
+</div>
+
+<!-- Hotel Cactus -->
+<div *ngIf="mostrarInformacionCactus">
+  <h2 mat-dialog-title>Elegir habitación</h2>
+  <mat-dialog-content class="content">
+    <div class="info">
+      <span class="material-symbols-outlined">
+        location_on
+      </span>
+      <p>Juan José Flores y Quito, 200150 Puerto Baquerizo Moreno, Ecuador</p>
+      <span class="material-symbols-outlined" id="call">
+        call
+      </span>
+      <p> 092 271 7856</p>
+    </div>
+    <div class="date ">
+      <mat-form-field>
+        <mat-label>Ingrese un rango de fecha</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Llegada">
+          <input matEndDate placeholder="Salida">
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+    </div>
+    <!-- habitacion individual -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image
+          src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/215529368.jpg?k=ce2767e9622c56f993dc970b4e9f409c814218d198f3f279d4da27aa375a043e&o=&hp=1">
+        <h3>Habitación estandar</h3>
+        <h3 id="precio">$149 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>cama doble grande</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- habitacion doble -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/117509154.jpg?k=f4cb73f6adc2b342123034a55599d4636d575def0382b5a21b01ae8316f8bf6e&o=&hp=1">
+        <h3>Habitación doble</h3>
+        <h3 id="precio">$200 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p> 2 camas individuales</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- suite -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/215536932.jpg?k=2532ff5e1015282b3d7a9a371e179a8c6d1439538acd55afe3026a9d7e38e79f&o=&hp=1">
+        <h3>Habitación deluxe </h3>
+        <h3 id="precio">$225 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>cama grande con sofá</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close class="cancelar">Cancelar</button>
+  </mat-dialog-actions>
+</div>
+
+<!-- Hotel Ikala -->
+<div *ngIf="mostrarInformacionIkala">
+  <h2 mat-dialog-title>Elegir habitación</h2>
+  <mat-dialog-content class="content">
+    <div class="info">
+      <span class="material-symbols-outlined">
+        location_on
+      </span>
+      <p>Tomas de Berlanga y Moises Brito, 200350 Puerto Ayora, Ecuador</p>
+      <span class="material-symbols-outlined" id="call">
+        call
+      </span>
+      <p>+1 954-495-4979</p>
+    </div>
+    <div class="date ">
+      <mat-form-field>
+        <mat-label>Ingrese un rango de fecha</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Llegada">
+          <input matEndDate placeholder="Salida">
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+    </div>
+    <!-- habitacion individual -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image
+          src="https://images.trvl-media.com/lodging/24000000/23690000/23688400/23688395/11c8c7ef.jpg?impolicy=resizecrop&rw=1200&ra=fit">
+        <h3>Habitación estandar</h3>
+        <h3 id="precio">$244 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>cama doble grande</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- habitacion doble -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image src="https://images.trvl-media.com/lodging/24000000/23690000/23688400/23688395/4ca8bb0e.jpg?impolicy=resizecrop&rw=1200&ra=fit">
+        <h3>Habitación doble</h3>
+        <h3 id="precio">$290 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p> 2 camas individuales</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+    <!-- suite -->
+    <mat-card>
+      <mat-card-content class="individual">
+        <img mat-card-image src="https://images.trvl-media.com/lodging/24000000/23690000/23688400/23688395/f5de11da.jpg?impolicy=resizecrop&rw=1200&ra=fit">
+        <h3>Habitación duplex </h3>
+        <h3 id="precio">$310 Noche</h3>
+        <div class="infoHabita">
+          <div class="camita">
+            <span class="material-symbols-outlined" id="camita">
+              bed
+            </span>
+            <p>cama grande con sofá</p>
+          </div>
+          <div class="wifi">
+            <span class="material-symbols-outlined">
+              wifi
+            </span>
+            <p>Wifi Gratis</p>
+          </div>
+          <div class="baño">
+            <span class="material-symbols-outlined">
+              shower
+            </span>
+            <p>Baño privado</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="botonR">
+        <button mat-button (click)="abrirInformacionReserva()">Reservar</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close class="cancelar">Cancelar</button>
+  </mat-dialog-actions>
+</div>

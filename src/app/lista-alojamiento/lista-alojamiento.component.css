@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+table {
+    margin-top: 2%;
+    width: 50%;
+    color: tomato;
+    margin-bottom: 0;
+  }
+
+h2{
+    color:tomato;
+    margin-top: 9%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+    
+}
+
+.titu{
+    color: rgb(255, 147, 6);
+    align-items: center;
+}

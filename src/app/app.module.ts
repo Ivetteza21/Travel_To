@@ -47,6 +47,13 @@ import { MatCardModule } from '@angular/material/card';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PaqueteviajeService } from '../app/services/paqueteviaje.service';
+import { AlojamientoComponent } from './alojamiento/alojamiento.component';
+import { ConfirmacionComponent } from './confirmacion/confirmacion.component';
+import { DestinoComponent } from './destino/destino.component';
+import { EncabezadoComponent } from './encabezado/encabezado.component';
+import { HabitacionesComponent } from './habitaciones/habitaciones.component';
+import { ListaAlojamientoComponent } from './lista-alojamiento/lista-alojamiento.component';
+import { ReservaIComponent } from './reserva-i/reserva-i.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +68,13 @@ import { PaqueteviajeService } from '../app/services/paqueteviaje.service';
     ReservaComponent,
     CreateUserComponent,
     EditUserComponent,
+    AlojamientoComponent,
+    ConfirmacionComponent,
+    
+    EncabezadoComponent,
+
+    ListaAlojamientoComponent,
+    
 
   ],
   imports: [
@@ -88,6 +102,9 @@ import { PaqueteviajeService } from '../app/services/paqueteviaje.service';
     MatCardModule,
     MaterialModule,
     HttpClientModule,
+    ReservaIComponent,
+    HabitacionesComponent,
+    DestinoComponent,
   ],
   //schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [AuthService, PaqueteviajeService],
